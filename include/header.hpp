@@ -51,9 +51,7 @@ explicit  SharedPtr(const SharedPtr& r)
        {reset(r._adress);}
        return *this;
    }
-   // auto opeartor=(SharedPtr&& r) -> SharedPtr&;
-
-    // проверяет, указывает ли указатель на объект
+  
     operator bool() const
     {
         if (!_adress){return false;}
@@ -102,4 +100,4 @@ explicit  SharedPtr(const SharedPtr& r)
 template <typename T>
 map<int64_t, size_t> SharedPtr<T>::_adresses{};
 
-#endif // INCLUDE_HEADER_HPP_
+#endif
